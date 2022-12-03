@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Docker Build') {
       steps {
-        sh "docker build -t kmlaydin/podinfo:${env.BUILD_NUMBER} ."
+        sh "docker build -t rakesh1533/devopswebapp:${env.BUILD_NUMBER} ."
       }
     }
     stage('Docker Push') {
