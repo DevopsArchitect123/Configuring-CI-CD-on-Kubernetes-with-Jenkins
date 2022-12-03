@@ -10,7 +10,7 @@ pipeline {
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerhub_login', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
           sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-          sh "docker push kmlaydin/podinfo:${env.BUILD_NUMBER}"
+          sh "docker push rakesh1533/devopswebapp:${env.BUILD_NUMBER}"
         }
       }
     }
